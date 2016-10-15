@@ -1,9 +1,9 @@
-angular.module('cgang', ['ui.bootstrap', 'ui.router', 'ngAnimate', 'table']);
+angular.module('cgang', ['ui.bootstrap', 'ui.router', 'table']);
 
 angular.module('cgang').config(function($stateProvider, $urlRouterProvider) {
 
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/');
 
 });
 

@@ -1,4 +1,6 @@
-<div class="col-md-12" ng-controller="TableCtrl">
+<div class="col-md-12" ng-controller="TableCtrl as vm">
 
+    <h3>table directive example</h3>
 
+    <dk-table table-data="vm.users" table-columns="vm.userColumns"></dk-table>
 </div>

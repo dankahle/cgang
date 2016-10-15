@@ -1,4 +1,13 @@
+
 <div>
+    <span ng-show="empty">No data to show.</span>
 
-
+    <table ng-hide="empty" class="table">
+        <tr>
+            <th ng-repeat="key in keys">{{key}}</th>
+        </tr>
+        <tr ng-repeat="item in tableData">
+            <td ng-repeat="key in keys">{{item[key]}}</td>
+        </tr>
+    </table>
 </div>
