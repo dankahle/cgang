@@ -11,6 +11,7 @@ angular.module('table').directive('dkTable', function () {
 
             if (!scope.tableData.length) {
                 scope.empty = true;
+                return;
             }
 
             scope.keys = Object.keys(scope.tableData[0]);
