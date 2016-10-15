@@ -1,13 +1,14 @@
 angular.module('table')
     .controller('TableCtrl', function ($scope, Users) {
-        var vm = this;
+        var page = this;
+        page.val = 'stuff';
 
         Users.getUsers()
             .then(function (users) {
-                vm.users = users;
+                page.users = users;
             });
 
-        vm.userColumns = [
+        page.userColumns = [
             {key: 'name', header: 'My Name'},
             {key: 'age', header: 'My Age'}
         ];

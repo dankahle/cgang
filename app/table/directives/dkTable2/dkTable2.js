@@ -4,6 +4,7 @@ angular.module('table')
             restrict: 'E',
             replace: true,
             scope: {
+                page: '=',
                 tableData: '=',
                 tableColumns: '='
             },
@@ -11,7 +12,7 @@ angular.module('table')
             controllerAs: 'vm',
             bindToController: true,
             controller: function ($scope) {
-                var vm = $scope.vm;
+                var vm = this;
 
                 $scope.$watch('vm.tableData', function (newVal) {
 
@@ -19,8 +20,8 @@ angular.module('table')
                         return;
                     }
 
-                    vm.headers = _.map(vm.tableColumns, 'header')
-                    vm.keys = _.map(vm.tableColumns, 'key')
+                    vm.headers = _.map(vm.tableColumns, 'header');
+                    vm.keys = _.map(vm.tableColumns, 'key');
 
                     if (!vm.tableData.length || !vm.headers.length || !vm.keys.length) {
                         vm.empty = true;

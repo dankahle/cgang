@@ -1,13 +1,13 @@
-<div class="col-md-12" ng-controller="TableCtrl as vm">
+<div class="col-md-12" ng-controller="TableCtrl as page">
     <br><br>
 
     <h4>table directive example1 (shows all properties)</h4>
 
-    <dk-table table-data="vm.users"></dk-table>
+    <dk-table table-data="page.users"></dk-table>
     <br><br>
 
     <h4>table directive example2 (specify properties and headers)</h4>
-    <dk-table2 table-data="vm.users" table-columns="vm.userColumns" class="col-xs-8">
+    <dk-table2 table-data="page.users" table-columns="page.userColumns" class="col-xs-8" page="page">
 
     </dk-table2>
 </div>
