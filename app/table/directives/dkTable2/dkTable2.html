@@ -1,0 +1,13 @@
+
+<div>
+    <span ng-show="vm.empty">No data to show.</span>
+
+    <table ng-hide="vm.empty" class="table">
+        <tr>
+            <th ng-repeat="header in vm.headers">{{header}}</th>
+        </tr>
+        <tr ng-repeat="item in vm.tableData">
+            <td ng-repeat="key in vm.keys">{{item[key]}}</td>
+        </tr>
+    </table>
+</div>

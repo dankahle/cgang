@@ -164,7 +164,7 @@ module.exports = function (grunt) {
         }
       }
     },
-    //Imagemin has issues on Windows.  
+    //Imagemin has issues on Windows.
     //To enable imagemin:
     // - "npm install grunt-contrib-imagemin"
     // - Comment in this section
@@ -215,6 +215,7 @@ module.exports = function (grunt) {
       grunt.config('jshint.main.src', filepath);
       tasksToRun.push('jshint');
 
+/*
       //find the appropriate unit test for the changed file
       var spec = filepath;
       if (filepath.lastIndexOf('-spec.js') === -1 || filepath.lastIndexOf('-spec.js') !== filepath.length - 8) {
@@ -229,6 +230,7 @@ module.exports = function (grunt) {
         grunt.config('karma.options.files', files);
         tasksToRun.push('karma:during_watch');
       }
+*/
     }
 
     //if index.html changed, we need to reread the <script> tags so our next run of karma

@@ -7,12 +7,10 @@ angular.module('table')
                 vm.users = users;
             });
 
-/*
         vm.userColumns = [
-            {key: 'name', header: 'Name'},
-            {key: 'age', header: 'Age'}
+            {key: 'name', header: 'My Name'},
+            {key: 'age', header: 'My Age'}
         ];
-*/
 
 
     });
